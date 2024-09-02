@@ -1,0 +1,11 @@
+OntoNet use three different formats :
+
+- OBO (Open Biomedical Ontologies) : the more readable format for human. One element begin by "[Term]" or "[Typedef]" (property) and define by one stanza. Each line into stanza give one information, and the information type is given by a tag. More informations are findable at https://owlcollab.github.io/oboformat/doc/GO.format.obo-1_4.html
+
+- OWL (Ontology Web Language) : standart ontology format, it's in XML (less readable). The file it's organize into 3 part : 
+	. Prefix definition 
+	. Properties definition
+	. Classes (=terms) definition  
+More informations are findable at https://www.w3.org/TR/owl-ref/
+
+- OFN (OWL functional-style Syntax) : shortest version of OWL format, with the same informations : prefix definition, classes declaration then classes definition. The properties of one term are write in other way. More informations are findable at https://www.w3.org/TR/owl2-syntax/

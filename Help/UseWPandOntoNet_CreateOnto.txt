@@ -1,0 +1,13 @@
+To create an ontology on OntoNet editable with WebProtege:
+
+0- [OPTIONAL: if the project needs to be created from an OBO file]
+Use the OBO cleaning function in OntoNet, generating a new file.
+
+1- Log in to WebProtege and create a new project by selecting the file from which to create the project.
+If step 0 has been completed, select the OBO file generated after correction. If the file cannot be read, create a test project in OntoNet with the file to see what is preventing it from being read.
+
+2- Download the ontology file from WebProtege in 'OWL Functional Syntax' format. Unzip the downloaded file (named "urn_webprotege_ontology_[...].ofn").
+
+3- Create a new project in OntoNet: select 'Import WebProtege file: ofn format' and select the unzipped file from WebProtege.
+
+4- Enter the project-related information.

@@ -1,0 +1,10 @@
+To access to one project's history :
+
+- Connect you to the ascidian team account on https://github.com/
+- Click on account image on the top right corner
+- Select "Your repositories"
+- Select the project 
+
+You can see the list of all edition of the project if you click on commits number, under the 'code' button on the right. If you click on one edition can can see all files changed with green and red color code for the changes on this edition.
+
+You can also select one file and click on history button in right upper the file. That permit to you to see the list of editions that change this file.

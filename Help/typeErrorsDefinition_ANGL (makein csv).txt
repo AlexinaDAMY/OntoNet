@@ -1,0 +1,99 @@
+/// Quality Tests - Severity Level = ERROR ///
+
+
+dc_properties - ensure the dc namespace used is the recommended one
+==> Use "http://purl.org/dc/terms/" instead of the obsolete "http://purl.org/dc/elements/1.1/".
+
+deprecated_boolean_datatype - annotation 'deprecated' with a value other than true or false: The annotation must be "true" or "false". 
+==> Redefine the value as "true" or "false".
+
+deprecated_class_reference - deprecated term in a logical relation (term equivalence, deprecated term having a subclass, etc.).
+==> The term is not actually deprecated, or the relation should be removed. Confirm the status or adjust the relation.
+
+deprecated_property_reference - use of a deprecated relation.
+==> Verify if the relation is actually deprecated. Confirm the status or adjust the relation.
+
+duplicate_definition - different terms having the same definitions.
+==> Remove the duplicated terms or specify their definitions. Adjust the definitions or the terms.
+
+duplicate_label - different terms having the same labels (label = identifier of a term for the user).
+==> Remove the duplicated terms or specify their labels.
+
+illegal_use_of_built_in_vocabulary - predefined vocabulary (e.g. owl :ClassDepreciated) being redefined in the ontology.
+==> See documents at OntoNet/Help/Vocabularies/owl.ttl or OntoNet/Help/Vocabularies/22-redf-syntax-ns.ttl. Verify and correct the used vocabulary.
+
+iri_range - related to two annotation relations: never_in_taxon (RO_0002161) and present_in_taxon (RO_0002175): Verifies that their value is an IRI that starts with 'http://purl.obolibrary.org/obo/NCBITaxon_'. 
+==> Check the IRI value of the relation appearing in the error.
+
+label_formatting - presence of formatted characters in the label of a term.
+==> Remove the formatted character.
+
+label_whitespace - presence of space(s) at the beginning or end of the label of a term.
+==> Remove these spaces.
+
+label_with_iri - detects malformed IRIs: Checks if the IRI attached to the term starts with something other than 'http(s):'. 
+==> If the IRI is incorrect, if not select the error when updating the project to stop tracking it.
+
+missing_label - term without a label.
+==> Provide a label for the term.
+
+missing_ontology_description / missing ontology license / missing ontology title - no description/title/license associated with the ontology.
+==> If the error occurs after project creation, it is a malfunction of OntoNet. Otherwise, you may have deleted these elements while editing the ontology, and need to revisit these edits.
+
+misused_obsolete_label - non-deprecated term having the prefix "obsolete".
+==> Add the annotation "deprecated" or remove the prefix.
+
+misused_replaced_by - annotation "replaced by" used on a non-obsolete term.
+==> Add the prefix "obsolete" on the term or remove the annotation "replaced by".
+
+multiple_definitions - term having more than one definition.
+==> Remove the extra definitions if added instead of modifying the definition, rewrite a definition containing all information, or create a new term for each additional definition.
+
+multiple_equivalent_class_definitions - term having multiple equivalent terms: may cause contradictory relations.
+==> If it is indeed an error, remove some equivalence relations or create a new term equivalent to the intersection of the equivalent terms if that was the initial intent.
+
+multiple_labels - term having multiple labels.
+==> Remove some labels or create a new term for each additional label.
+
+multiple_replaced_by - a term having two "replaced by" relations. 
+==> If the two terms A and B pointed to by the relations are identical, remove one. Otherwise, it may be that one of the two terms replaces the other.
+
+owldef_self_reference - term A equivalent to the intersection of A and B, with B having a relation pointing to term A (A points to itself) OR term A equivalent to the intersection of terms including A.
+==> The equivalence relation may be incorrect, or A should be removed to define the intersection, or the relation from B to A should be removed. Verify the equivalence relation or remove A or the relation from B to A.
+
+
+Quality Tests - Severity Level = WARN
+
+annotation_whitespace - value of an annotation relation with one or more spaces at the beginning or end. 
+==> Remove the spaces from the indicated value.
+
+duplicate_exact_synonym - two non-deprecated terms have the same synonym with the mention [EXACT]. 
+==> If this is indeed an error, it may be that the two terms are actually the same term. This could also be due to the exact mention not being valid for both terms or the chosen synonym being incorrect for one of the terms.
+
+duplicate_label_synonym - a non-deprecated term has the same label as its synonym. 
+==> It could be a duplicated term, in which case one should be removed, or one of the labels should be redefined.
+
+duplicate_scoped_synonym - a term has synonyms that only differ in their relations. 
+==> The synonyms are likely the same term duplicated, so one should be removed and the remaining one should be given the relations that were in the first and are missing.
+
+equivalent_pair - two terms are equivalent to each other and only to each other. 
+==> This might be a logical error: missing an equivalence relation with another external term, or the equivalence relation might be incorrect and should be removed.
+
+equivalent_class_axiom_no_genus - equivalence between two terms a and b with b being a subclass of B: a is therefore also a subclass of B. 
+==> If a is not a subclass of B, then remove the equivalence relation or the parent link between b and B.
+
+invalid_xref - reference to a term from another database not in CURIE format. 
+==> Put the reference in CURIE format.
+
+missing_definition - non-deprecated term has no definition. 
+==> Add a definition to the term.
+
+multiple_equivalent_classes - term having more than one equivalent term. 
+==> Potential oversight in indicating equivalence to the intersection of these terms.
+
+
+Quality Tests - Severity Level = INFO
+
+missing_superclass - non-deprecated term with no parent term. Potential oversight in categorizing the term.
+==> Assign a parent term to the indicated term.
+

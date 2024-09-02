@@ -1,0 +1,15 @@
+When you update a project, OntoNet deiplay the errors founded in a new window to permit you to select the errors that are not in context of your project. Errors are registered into files ODK/target/ProjectName/src/ontology/mainReports into "LabelledNotError.csv" and "Report_ErrorsToFix.csv".
+
+Each error have the same presentation :
+
+- [OPTIONAL] Error severity level. Errors are divided into three error levels, from more to less severe : ERROR, WARN, INFO. More is severe, more there are chances it's really an error.
+
+- Type : name of error, what is the problem.
+
+- Entity : term with the error.
+
+- Property : property of the terme that give the error.
+
+- Value : value pointed by the property. can be empty if the property didn't exist.
+
+Some errors can are in several lines, like "duplicate_definition" where many terms have exactly the same definition (one term by line).

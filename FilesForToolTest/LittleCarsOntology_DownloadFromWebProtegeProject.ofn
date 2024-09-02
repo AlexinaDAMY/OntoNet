@@ -1,0 +1,35 @@
+Prefix(:=<urn:webprotege:ontology:39876950-7db6-4769-8fea-f715ece9bf21#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:webprotege:ontology:39876950-7db6-4769-8fea-f715ece9bf21>
+
+Declaration(Class(<http://webprotege.stanford.edu/RCNlNhGQ4a7nMsFOSOEY86S>))
+Declaration(Class(<http://webprotege.stanford.edu/RRmAhU6zIsZ18qH6nTIz99>))
+Declaration(Class(<http://webprotege.stanford.edu/RhQ9jWrpIyYKFYlezSb6Bu>))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://webprotege.stanford.edu/RCNlNhGQ4a7nMsFOSOEY86S> (Honda)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RCNlNhGQ4a7nMsFOSOEY86S> "Honda")
+SubClassOf(<http://webprotege.stanford.edu/RCNlNhGQ4a7nMsFOSOEY86S> <http://webprotege.stanford.edu/RRmAhU6zIsZ18qH6nTIz99>)
+
+# Class: <http://webprotege.stanford.edu/RRmAhU6zIsZ18qH6nTIz99> (car)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RRmAhU6zIsZ18qH6nTIz99> "car")
+
+# Class: <http://webprotege.stanford.edu/RhQ9jWrpIyYKFYlezSb6Bu> (twingo)
+
+AnnotationAssertion(rdfs:label <http://webprotege.stanford.edu/RhQ9jWrpIyYKFYlezSb6Bu> "twingo")
+SubClassOf(<http://webprotege.stanford.edu/RhQ9jWrpIyYKFYlezSb6Bu> <http://webprotege.stanford.edu/RRmAhU6zIsZ18qH6nTIz99>)
+
+
+)
